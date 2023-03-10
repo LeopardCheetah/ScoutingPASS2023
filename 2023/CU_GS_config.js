@@ -18,7 +18,7 @@ var config_data = `
       "code": "e",
       "gsCol": "event",
       "type": "event",
-      "defaultValue": "2022carv",
+      "defaultValue": "2023caph",
       "required": "true",
       "disabled": "true"
     },
