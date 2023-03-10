@@ -14,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023cafr",
+      "defaultValue": "2023caph",
       "required": "true",
       "disabled": "true"
     },
