@@ -4,7 +4,6 @@ var config_data = `
   "title": "Scouting PASS 2023",
   "page_title": "Charged Up",
   "checkboxAs": "10",
-  "enable_google_sheets": "true",
   "prematch": [
     { "name": "Scouter Initials",
       "code": "s",
@@ -18,18 +17,20 @@ var config_data = `
       "code": "e",
       "gsCol": "event",
       "type": "event",
+      "defaultValue": "2023caph",
+      "required": "true",
+      "disabled": "true"
     },
     { "name": "Match Level",
       "code": "l",
       "gsCol": "level",
       "type": "level",
       "choices": {
-        "p": "Practice<br>",
         "qm": "Quals<br>",
         "de": "Double Elimination<br>",
         "f": "Finals"
       },
-      "defaultValue": "p",
+      "defaultValue": "qm",
       "required": "true"
     },
     { "name": "Match #",
@@ -59,7 +60,7 @@ var config_data = `
       "gsCol": "teamNum",
       "type": "team",
       "min": 1,
-      "max": 9999
+      "max": 99999
     },
     { "name": "Auto Start Position",
       "code": "as",
@@ -112,6 +113,11 @@ var config_data = `
     }
   ],
   "teleop": [
+    { "name": "Cycle Timer",
+      "code": "tct",
+      "gsCol": "cycleTimes",
+      "type": "cycle"
+    },
     { "name": "Grid Scoring",
       "code": "tsg",
       "gsCol": "gridScoring",
@@ -245,6 +251,12 @@ var config_data = `
     { "name": "Dropped Cones (>2)",
       "code": "dc",
       "gsCol": "droppedCones",
+      "type": "bool"
+    },
+    { "name": "Make good<br>alliance partner?",
+      "tooltip": "Would you want this robot on your alliance in eliminations?",
+      "code": "all",
+      "gsCol": "goodPartners",
       "type": "bool"
     },
     { "name": "Comments",
