@@ -6,7 +6,7 @@ var config_data = `
   "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Initials",
-      "code": "s",
+      "code": "Name",
       "gsCol": "scouter",
       "type": "scouter",
       "size": 5,
@@ -22,7 +22,7 @@ var config_data = `
       "disabled": "true"
     },
     { "name": "Match Level",
-      "code": "l",
+      "code": "Match Level",
       "gsCol": "level",
       "type": "level",
       "choices": {
@@ -34,7 +34,7 @@ var config_data = `
       "required": "true"
     },
     { "name": "Match #",
-      "code": "m",
+      "code": "Match Num",
       "gsCol": "matchNum",
       "type": "match",
       "min": 1,
@@ -42,7 +42,7 @@ var config_data = `
       "required": "true"
     },
     { "name": "Robot",
-      "code": "r",
+      "code": "Robot Alliance",
       "gsCol": "robot",
       "type": "robot",
       "choices": {
@@ -56,14 +56,14 @@ var config_data = `
       "required":"true"
     },
     { "name": "Team #",
-      "code": "t",
+      "code": "Team Num",
       "gsCol": "teamNum",
       "type": "team",
       "min": 1,
       "max": 99999
     },
     { "name": "Auto Start Position",
-      "code": "as",
+      "code": "Auto Position",
       "gsCol": "autoStartPosition",
       "type": "field_image",
       "filename": "2023/field_image.png",
@@ -113,11 +113,6 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Cycle Timer",
-      "code": "tct",
-      "gsCol": "cycleTimes",
-      "type": "cycle"
-    },
     { "name": "Grid Scoring",
       "code": "tsg",
       "gsCol": "gridScoring",
@@ -165,11 +160,6 @@ var config_data = `
     }
   ],
   "endgame": [
-    { "name": "Docking Timer",
-      "code": "dt",
-      "gsCol": "dockingTime",
-      "type": "timer"
-    },
     { "name": "Final Status",
       "code": "fs",
       "gsCol": "endgameStatus",
