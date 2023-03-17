@@ -113,12 +113,7 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Cycle Timer",
-      "code": "tct",
-      "gsCol": "cycleTimes",
-      "type": "cycle"
-    },
-    { "name": "Grid Scoring",
+       { "name": "Grid Scoring",
       "code": "tsg",
       "gsCol": "gridScoring",
       "type": "clickable_image",
