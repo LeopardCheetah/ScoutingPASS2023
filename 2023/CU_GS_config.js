@@ -17,7 +17,7 @@ var config_data = `
       "code": "e",
       "gsCol": "event",
       "type": "event",
-      "defaultValue": "2023cafr",
+      "defaultValue": "2023casj",
       "required": "true",
       "disabled": "true"
     },
