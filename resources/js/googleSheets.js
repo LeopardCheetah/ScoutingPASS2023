@@ -1,5 +1,6 @@
 function setUpGoogleSheets() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjD7TWMBW_EwIzoiHFKXeCkPFeJOGDIuiy0CVdNVKh-ipcLxAtpQnNFlIiWjxaiF5b/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyc3MLUiDpXZT_a7R0hCPFMF1L_cqRYCCd0odd8PtVHKz-Im0ObbwlAhULcCd0bJ4HNRg/exec'
+    // linked to Leopard's school account
     const form = document.querySelector('#scoutingForm')
     const btn = document.querySelector('#submit')
  
