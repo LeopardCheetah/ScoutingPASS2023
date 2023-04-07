@@ -68,7 +68,7 @@ var config_data = `
       "type": "field_image",
       "filename": "2023/field_image.png",
       "clickRestriction": "one",
-      "showFlip": "false",
+      "showFlip": "true",
       "shape": "circle 5 black red true"
     }
   ],
