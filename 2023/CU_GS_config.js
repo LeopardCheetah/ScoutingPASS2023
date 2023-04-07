@@ -68,22 +68,22 @@ var config_data = `
       "type": "field_image",
       "filename": "2023/field_image.png",
       "clickRestriction": "one",
-      "showFlip": "true",
+      "showFlip": "false",
       "shape": "circle 5 black red true"
     }
   ],
   "auton": [
-    { "name": "Number of Pieces Scored High",
+    { "name": "High Piece Scored",
       "code": "aph",
       "gsCol": "AutoHighCount",
       "type": "counter"
     },
-    { "name": "Number of Pieces Scored Middle",
+    { "name": "Middle Piece Scored",
       "code": "apm",
       "gsCol": "AutoMidCount",
       "type": "counter"
     },
-    { "name": "Number of Ground Pieces Scored",
+    { "name": "Ground Piece Scored",
       "code": "apg",
       "gsCol": "AutoGroundCount",
       "type": "counter"
@@ -107,17 +107,17 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Number of Pieces Scored High",
+    { "name": "High Piece Scored",
       "code": "tph",
       "gsCol": "TeleopHighCount",
       "type": "counter"
     },
-    { "name": "Number of Pieces Scored Middle",
+    { "name": "Middle Piece Scored",
       "code": "tpm",
       "gsCol": "TeleopMidCount",
       "type": "counter"
     },
-    { "name": "Number of Ground Pieces Scored",
+    { "name": "Ground Piece Scored",
       "code": "tpg",
       "gsCol": "TeleopGroundCount",
       "type": "counter"
@@ -132,37 +132,72 @@ var config_data = `
       "gsCol": "defenderTeamNum",
       "type": "text"
     },
-    { "name": "Cube Intake",
-      "code": "cin",
-      "gsCol": "cinpos",
-      "type": "checkbox",
-      "choices": {
-        "d": "Double Substation<br>",
-        "s": "Single Substation<br>",
-        "g": "Ground<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
+    
+    { "name": "Cube Intake"},
+    
+    { "name": "Double Substation",
+      "code": "cds",
+      "gsCol": "cds",
+      "type": "checkbox"
     },
-    { "name": "Cone Intake",
-      "code": "yin",
-      "gsCol": "yinpos",
-      "type": "checkbox",
-      "choices": {
-        "d": "Double Substation<br>",
-        "s": "Single Substation<br>",
-        "g": "Ground - Upright<br>",
-        "f": "Ground - Fallen<br>",
-        "x": "Not Attempted"
-      },
-      "defaultValue": "x"
+    
+    { "name": "Single Substation",
+      "code": "css",
+      "gsCol": "css",
+      "type": "checkbox"
+    },
+    
+    { "name": "Ground",
+      "code": "cgr",
+      "gsCol": "cgr",
+      "type": "checkbox"
+    },
+    
+    { "name": "Not Attempted",
+      "code": "cna",
+      "gsCol": "cna",
+      "type": "checkbox"
+    },
+    
+    
+    { "name": "Cone Intake"},
+    
+    { "name": "Double Substation",
+      "code": "yds",
+      "gsCol": "yds",
+      "type": "checkbox"
+    },
+    
+    { "name": "Single Substation",
+      "code": "yss",
+      "gsCol": "yss",
+      "type": "checkbox"
+    },
+    
+    { "name": "Ground - Upright",
+      "code": "ygrup",
+      "gsCol": "ygrup",
+      "type": "checkbox"
+    },
+    
+    { "name": "Ground - Tilted",
+      "code": "ygrt",
+      "gsCol": "ygrt",
+      "type": "checkbox"
+    },
+    
+    { "name": "Not Attempted",
+      "code": "yna",
+      "gsCol": "yna",
+      "type": "checkbox"
     }
+    
   ],
   "endgame": [
     { "name": "Final Status",
       "code": "fs",
       "gsCol": "endgameStatus",
-      "type":"radio",
+      "type": "radio",
       "choices": {
         "p": "Parked<br>",
         "d": "Docked (Not Engaged)<br>",
@@ -210,7 +245,7 @@ var config_data = `
         "2": "2<br>",
         "3": "3<br>",
         "4": "4<br>",
-        "5": "5 (very good)",
+        "5": "5 (very good)<br>",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
