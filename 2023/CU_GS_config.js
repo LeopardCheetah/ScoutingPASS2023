@@ -68,33 +68,27 @@ var config_data = `
       "type": "field_image",
       "filename": "2023/field_image.png",
       "clickRestriction": "one",
+      "showFlip": "true",
       "shape": "circle 5 black red true"
     }
   ],
   "auton": [
-    { "name": "Auto Scoring",
-      "code": "asg",
-      "gsCol": "autoScoringGrid",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true"
+    { "name": "Number of Pieces Scored High",
+      "code": "aph",
+      "gsCol": "AutoHighCount",
+      "type": "counter"
     },
-    { "name": "Crossed Cable",
-      "code": "acc",
-      "gsCol": "autoCrossedCable",
-      "type": "bool"
+    { "name": "Number of Pieces Scored Middle",
+      "code": "apm",
+      "gsCol": "AutoMidCount",
+      "type": "counter"
     },
-    { "name": "Crossed Charging Station",
-      "code": "acs",
-      "gsCol": "autoCrossedChargingStation",
-      "type": "bool"
+    { "name": "Number of Ground Pieces Scored",
+      "code": "apg",
+      "gsCol": "AutoGroundCount",
+      "type": "counter"
     },
-    { "name": "Mobility?",
+    { "name": "Mobility Points",
       "code": "am",
       "gsCol": "autoMobility",
       "type": "bool"
@@ -113,22 +107,19 @@ var config_data = `
     }
   ],
   "teleop": [
-       { "name": "Grid Scoring",
-      "code": "tsg",
-      "gsCol": "gridScoring",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true",
-      "cycleTimer": "tct"
+    { "name": "Number of Pieces Scored High",
+      "code": "tph",
+      "gsCol": "TeleopHighCount",
+      "type": "counter"
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "gsCol": "feedCount",
+    { "name": "Number of Pieces Scored Middle",
+      "code": "tpm",
+      "gsCol": "TeleopMidCount",
+      "type": "counter"
+    },
+    { "name": "Number of Ground Pieces Scored",
+      "code": "tpg",
+      "gsCol": "TeleopGroundCount",
       "type": "counter"
     },
     { "name": "Was Defended",
@@ -141,19 +132,27 @@ var config_data = `
       "gsCol": "defenderTeamNum",
       "type": "text"
     },
-    { "name": "Smart Placement<br>(creates Links)",
-      "code": "lnk",
-      "gsCol": "smartPlacement",
-      "type": "bool"
-    },
-    { "name": "Floor Pick UP",
-      "code": "fpu",
-      "gsCol": "floorPickUp",
-      "type": "radio",
+    { "name": "Cube Intake",
+      "code": "cin",
+      "gsCol": "cinpos",
+      "type": "checkbox",
       "choices": {
-        "o": "Cone<br>",
-        "u": "Cube<br>",
-        "b": "Both<br>",
+        "d": "Double Substation<br>",
+        "s": "Single Substation<br>",
+        "g": "Ground<br>",
+        "x": "Not Attempted"
+      },
+      "defaultValue": "x"
+    }
+    { "name": "Cone Intake",
+      "code": "yin",
+      "gsCol": "yinpos",
+      "type": "checkbox",
+      "choices": {
+        "d": "Double Substation<br>",
+        "s": "Single Substation<br>",
+        "g": "Ground - Upright<br>",
+        "f": "Ground - Fallen<br>",
         "x": "Not Attempted"
       },
       "defaultValue": "x"
@@ -197,25 +196,26 @@ var config_data = `
       "gsCol": "linksScored",
       "type": "counter"
     },
+    { "name": "Points Scored",
+      "code": "pts",
+      "gsCol": "PointsScored",
+      "type": "number"
+    },
     { "name": "Defense Rating",
       "code": "dr",
       "gsCol": "defenseRating",
       "type": "radio",
       "choices": {
-        "b": "Below Average<br>",
-        "a": "Average<br>",
-        "g": "Good<br>",
-        "e": "Excellent<br>",
+        "1": "1 (very bad)<br>",
+        "2": "2<br>",
+        "3": "3<br>",
+        "4": "4<br>",
+        "5": "5 (very good)",
         "x": "Did not play defense"
       },
       "defaultValue": "x"
     },
-    { "name": "Swerve drive?",
-      "code": "sd",
-      "gsCol": "swerveDrive",
-      "type": "bool"
-    },
-    { "name": "Speed Rating",
+    { "name": "Speed",
       "code": "sr",
       "gsCol": "speedRating",
       "type": "radio",
@@ -236,17 +236,6 @@ var config_data = `
     { "name": "Tippy<br>(almost tipped over)",
       "code": "tip",
       "gsCol": "tippy",
-      "type": "bool"
-    },
-    { "name": "Dropped Cones (>2)",
-      "code": "dc",
-      "gsCol": "droppedCones",
-      "type": "bool"
-    },
-    { "name": "Make good<br>alliance partner?",
-      "tooltip": "Would you want this robot on your alliance in eliminations?",
-      "code": "all",
-      "gsCol": "goodPartners",
       "type": "bool"
     },
     { "name": "Comments",
