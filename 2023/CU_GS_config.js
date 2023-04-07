@@ -131,65 +131,6 @@ var config_data = `
       "code": "who",
       "gsCol": "defenderTeamNum",
       "type": "text"
-    },
-    
-    { "name": "Cube Intake"},
-    
-    { "name": "Double Substation",
-      "code": "cds",
-      "gsCol": "cds",
-      "type": "checkbox"
-    },
-    
-    { "name": "Single Substation",
-      "code": "css",
-      "gsCol": "css",
-      "type": "checkbox"
-    },
-    
-    { "name": "Ground",
-      "code": "cgr",
-      "gsCol": "cgr",
-      "type": "checkbox"
-    },
-    
-    { "name": "Not Attempted",
-      "code": "cna",
-      "gsCol": "cna",
-      "type": "checkbox"
-    },
-    
-    
-    { "name": "Cone Intake"},
-    
-    { "name": "Double Substation",
-      "code": "yds",
-      "gsCol": "yds",
-      "type": "checkbox"
-    },
-    
-    { "name": "Single Substation",
-      "code": "yss",
-      "gsCol": "yss",
-      "type": "checkbox"
-    },
-    
-    { "name": "Ground - Upright",
-      "code": "ygrup",
-      "gsCol": "ygrup",
-      "type": "checkbox"
-    },
-    
-    { "name": "Ground - Tilted",
-      "code": "ygrt",
-      "gsCol": "ygrt",
-      "type": "checkbox"
-    },
-    
-    { "name": "Not Attempted",
-      "code": "yna",
-      "gsCol": "yna",
-      "type": "checkbox"
     }
     
   ],
