@@ -143,7 +143,7 @@ var config_data = `
         "x": "Not Attempted"
       },
       "defaultValue": "x"
-    }
+    },
     { "name": "Cone Intake",
       "code": "yin",
       "gsCol": "yinpos",
